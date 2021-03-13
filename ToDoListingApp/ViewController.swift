@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController {
     
    
     let toDo: [String] = ["Camasir", "Bulasik", "Supurum", "Yoga", "Sebze Alma"]
@@ -29,23 +29,31 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
            tableView.dataSource = self
        }
        
-      
-       func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-           return self.toDo.count
-       }
+     
        
-       func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-           
-        
-        let cell:UITableViewCell = (self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as UITableViewCell?)!
-           
-          
-           cell.textLabel?.text = self.toDo[indexPath.row]
-           
-           return cell
-       }
-       
-       func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-           print("Cell No: \(indexPath.row).")
-       }
+     
    }
+
+extension ViewController : UITableViewDelegate,UITableViewDataSource{
+    
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+         return self.toDo.count
+     }
+     
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+         
+      
+      let cell:UITableViewCell = (self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as UITableViewCell?)!
+         
+      
+      
+         cell.textLabel?.text = self.toDo[indexPath.row]
+         
+         return cell
+     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Cell No: \(indexPath.row).")
+    }
+    
+}
