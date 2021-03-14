@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B2236E625FE898000EFF734 /* DemoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2236E425FE898000EFF734 /* DemoTableViewCell.swift */; };
+		9B2236E725FE898000EFF734 /* DemoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B2236E525FE898000EFF734 /* DemoTableViewCell.xib */; };
 		9B71D86E25FBA13700DD3848 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B71D86D25FBA13700DD3848 /* AppDelegate.swift */; };
 		9B71D87025FBA13700DD3848 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B71D86F25FBA13700DD3848 /* SceneDelegate.swift */; };
 		9B71D87225FBA13700DD3848 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B71D87125FBA13700DD3848 /* ViewController.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B2236E425FE898000EFF734 /* DemoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTableViewCell.swift; sourceTree = "<group>"; };
+		9B2236E525FE898000EFF734 /* DemoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DemoTableViewCell.xib; sourceTree = "<group>"; };
 		9B71D86A25FBA13700DD3848 /* ToDoListingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoListingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B71D86D25FBA13700DD3848 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B71D86F25FBA13700DD3848 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 				9B71D87625FBA13900DD3848 /* Assets.xcassets */,
 				9B71D87825FBA13900DD3848 /* LaunchScreen.storyboard */,
 				9B71D87B25FBA13900DD3848 /* Info.plist */,
+				9B2236E425FE898000EFF734 /* DemoTableViewCell.swift */,
+				9B2236E525FE898000EFF734 /* DemoTableViewCell.xib */,
 			);
 			path = ToDoListingApp;
 			sourceTree = "<group>";
@@ -233,6 +239,7 @@
 			files = (
 				9B71D87A25FBA13900DD3848 /* LaunchScreen.storyboard in Resources */,
 				9B71D87725FBA13900DD3848 /* Assets.xcassets in Resources */,
+				9B2236E725FE898000EFF734 /* DemoTableViewCell.xib in Resources */,
 				9B71D87525FBA13700DD3848 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,6 +267,7 @@
 			files = (
 				9B71D87225FBA13700DD3848 /* ViewController.swift in Sources */,
 				9B71D86E25FBA13700DD3848 /* AppDelegate.swift in Sources */,
+				9B2236E625FE898000EFF734 /* DemoTableViewCell.swift in Sources */,
 				9B71D87025FBA13700DD3848 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
