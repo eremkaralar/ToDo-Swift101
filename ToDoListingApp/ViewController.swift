@@ -12,7 +12,8 @@ class ViewController: UIViewController {
    
     let toDo: [String] = ["Camasir", "Bulasik", "Supurum", "Yoga", "Sebze Alma"]
     let TaskDues = ["2021-03-13 10:00:00", "2021-03-13 12:00:00", "2021-03-13 14:00:00", "2021-03-13 16:00:00", "2021-03-14 10:00:00", "2021-03-15 12:00:00"]
-   
+    //Images are so cute OMG!
+    let TaskImage = [UIImage(named:"washing-machine"),UIImage(named:"dishwasher"),UIImage(named:"vacuum"),UIImage(named:"yoga"),UIImage(named:"vegetables-basket")]
 
     
    
@@ -49,7 +50,8 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
          
          cell.TaskName.text = toDo[indexPath.row]
          cell.TaskDue.text = TaskDues[indexPath.row]
-         cell.TaskImage.backgroundColor = .systemBlue
+        //Let them settle cutely ^^
+        cell.TaskImage.image = TaskImage[indexPath.row]
          
          return cell
      }
