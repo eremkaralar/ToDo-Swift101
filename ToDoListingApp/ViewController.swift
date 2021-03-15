@@ -10,10 +10,10 @@ import UIKit
 class ViewController: UIViewController {
     
    
-    let toDo: [String] = ["Camasir", "Bulasik", "Supurum", "Yoga", "Sebze Alma"]
-    let TaskDues = ["2021-03-13 10:00:00", "2021-03-13 12:00:00", "2021-03-13 14:00:00", "2021-03-13 16:00:00", "2021-03-14 10:00:00", "2021-03-15 12:00:00"]
+    var toDo: [String] = ["Camasir", "Bulasik", "Supurum", "Yoga", "Sebze Alma"]
+    var TaskDues = ["2021-03-13", "2021-03-13", "2021-03-13", "2021-03-13", "2021-03-14", "2021-03-15"]
     //Images are so cute OMG!
-    let TaskImage = [UIImage(named:"washing-machine"),UIImage(named:"dishwasher"),UIImage(named:"vacuum"),UIImage(named:"yoga"),UIImage(named:"vegetables-basket")]
+    var TaskImage = [UIImage(named:"washing-machine"),UIImage(named:"dishwasher"),UIImage(named:"vacuum"),UIImage(named:"yoga"),UIImage(named:"vegetables-basket")]
 
     
    
@@ -48,8 +48,8 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
 //Access to the properties!
         let cell = tableView.dequeueReusableCell(withIdentifier: "DemoTableViewCell",for:indexPath) as! DemoTableViewCell
          
-         cell.TaskName.text = toDo[indexPath.row]
-         cell.TaskDue.text = TaskDues[indexPath.row]
+         cell.TaskName.text = "Task: " + toDo[indexPath.row]
+         cell.TaskDue.text = "Due: " + TaskDues[indexPath.row]
         //Let them settle cutely ^^
         cell.TaskImage.image = TaskImage[indexPath.row]
          
@@ -59,15 +59,36 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Cell No: \(indexPath.row).")
     }
-    
+    //This func is handling the delete operation.
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+
+           if editingStyle == .delete {
+
+                toDo.remove(at: indexPath.row)
+                TaskDues.remove(at:indexPath.row)
+                TaskImage.remove(at:indexPath.row)
+            
+               tableView.deleteRows(at: [indexPath], with: .fade)
+
+           } else if editingStyle == .insert {
+               // For the insert. Let it stay there
+           }
+       }
+
+
 }
 //For the date(Task Due) array!
 extension String {
     func getMyDate() -> DateComponents {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:MM:SS"
+        dateFormatter.dateFormat = "yyyy-MM-dd"
         let date = dateFormatter.date(from: self)
-        let dateComp = Calendar.current.dateComponents([.day, .month, .year, .hour, .minute, .second], from: date!)
+        let dateComp = Calendar.current.dateComponents([.day, .month, .year], from: date!)
         return dateComp
     }
 }
+
+
+
+
+
