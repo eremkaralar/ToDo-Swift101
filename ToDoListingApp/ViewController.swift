@@ -19,34 +19,31 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    static var newToDo: ToDos?
+    var newToDo: ToDos?
     
+    @IBAction func unwindToViewController(_ unwindSegue: UIStoryboardSegue) {
+        if let sourceViewController = unwindSegue.source as? ToDoCreateViewController{
+            toDos.append(newToDo!)
+            tableView.reloadData()
+            
+        }
+    }
+   
     
-
     override func viewDidLoad() {
            super.viewDidLoad()
-        
-       
            
 //  Grand list title
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationItem.title = "To Dos"
         
-        
         let nib = UINib(nibName: "DemoTableViewCell", bundle: nil)
-           self.tableView.register(nib, forCellReuseIdentifier: "DemoTableViewCell")
+        self.tableView.register(nib, forCellReuseIdentifier: "DemoTableViewCell")
            
-           tableView.delegate = self
-           tableView.dataSource = self
-
-        
-
-//        view controllere obje gonder -> (methodu kaldır)
-//        let vc = ToDoCreateViewController(nibName: "ToDoCreateViewController", bundle: nil)
-//        vc.MainViewController = self
+        tableView.delegate = self
+        tableView.dataSource = self
         tableView.reloadData()
        }
-            
    }
 
 extension ViewController : UITableViewDelegate,UITableViewDataSource{
@@ -70,16 +67,8 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Cell No: \(indexPath.row).")
     }
-    func onUserAction(data: String)
-    {
-        print("Data received: \(data)")
-    }
-    
-    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let DVC = segue.destination as! ToDoCreateViewController //replace ViewController2 with the name of your 2nd VC
-        toDos += DVC.AddtoDos
-    }
-    
+
+
     //This func is handling the delete operation.
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
 
@@ -89,26 +78,7 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
                
             
                tableView.deleteRows(at: [indexPath], with: .fade)
-
-           } else if editingStyle == .insert {
-               // For the insert. Let it stay there
            }
-      
-    
-    
-    
-    }
-
-
-}
-//For the date(Task Due) array!
-extension String {
-    func getMyDate() -> DateComponents {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        let date = dateFormatter.date(from: self)
-        let dateComp = Calendar.current.dateComponents([.day, .month, .year], from: date!)
-        return dateComp
     }
 }
 

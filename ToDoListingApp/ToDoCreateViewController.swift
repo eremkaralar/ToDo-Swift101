@@ -24,7 +24,7 @@ class ToDoCreateViewController: UIViewController {
     }
     
     var MainViewController : ViewController?
-    var AddtoDos: [ToDos] = []
+    var newToDo: ToDos?
    
     
     @IBAction func CancelAction(_ sender: UIBarButtonItem) {
@@ -34,52 +34,24 @@ class ToDoCreateViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        if segue.destination is ViewController {
-//           let ViewController = ViewController()
-        
-        }
-            
+        if segue.identifier == "unwindToViewController" {
+            let viewController = segue.destination as! ViewController
+            let newToDo = sender as! ToDos
+            viewController.newToDo = newToDo
+            }
+
     }
-    
+
     @IBAction func DoneCreate(_ sender: UIBarButtonItem) {
-       
-        
-//        let vc = storyboard?.instantiateViewController(identifier: <#T##String#>) as! ToDoCreateViewController
-//        present(vc,animated:true)
-//        MainViewController?.onUserAction(data: "The quick brown fox jumps over the lazy dog")
-//        let nib = UINib(nibName: "DemoTableViewCell", bundle: nil)
-//           self.tableView.register(nib, forCellReuseIdentifier: "DemoTableViewCell")
-//
-//        let ToDoObject.TaskDue = TaskDue.date
         
         let dateFormatterGet = DateFormatter()
         dateFormatterGet.dateFormat = "yyyy-MM-dd"
       
-        var toDoObject: [ToDos] = [ToDos(TaskName: TaskNameField.text!, TaskDue: dateFormatterGet.string(from: TaskDue.date), TaskImage:UIImage(named:"washing-machine")!)]
-        var strtypdate = dateFormatterGet.string(from: TaskDue.date)
+        let toDoObject: [ToDos] = [ToDos(TaskName: TaskNameField.text!, TaskDue: dateFormatterGet.string(from: TaskDue.date), TaskImage:UIImage(named:"washing-machine")!)]
+
         
-      
-        
-        print(TaskNameField.text!)
-        print(strtypdate)
-        self.dismiss(animated: true, completion: nil)
-//    vcontrollera gonder (arraye eklenmek zorunda)(table view reload) ->dismiss
+        self.performSegue(withIdentifier: "unwindToViewController", sender: toDoObject)
+
     }
-    
-    
-    
-    
-
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

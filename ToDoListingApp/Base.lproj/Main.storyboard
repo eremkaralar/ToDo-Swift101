@@ -165,9 +165,11 @@
                     <connections>
                         <outlet property="TaskDue" destination="jNc-19-xrw" id="HVy-UP-IlD"/>
                         <outlet property="TaskNameField" destination="0Wu-Ek-vah" id="h0V-0L-0eB"/>
+                        <segue destination="VjY-UN-Vf1" kind="unwind" identifier="unwindToViewController" unwindAction="unwindToViewController:" id="19j-HX-fHY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BwF-uO-Kx4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="VjY-UN-Vf1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2730.434782608696" y="93.75"/>
         </scene>
