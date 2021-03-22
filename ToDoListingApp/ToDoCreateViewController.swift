@@ -47,8 +47,7 @@ class ToDoCreateViewController: UIViewController {
         let dateFormatterGet = DateFormatter()
         dateFormatterGet.dateFormat = "yyyy-MM-dd"
       
-        let toDoObject: [ToDos] = [ToDos(TaskName: TaskNameField.text!, TaskDue: dateFormatterGet.string(from: TaskDue.date), TaskImage:UIImage(named:"washing-machine")!)]
-
+        let toDoObject = ToDos(TaskName: TaskNameField.text!, TaskDue: dateFormatterGet.string(from: TaskDue.date), TaskImage:UIImage(named:"washing-machine")!)
         
         self.performSegue(withIdentifier: "unwindToViewController", sender: toDoObject)
 
