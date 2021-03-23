@@ -107,6 +107,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwx-jm-1yG">
                                 <rect key="frame" x="152" y="510" width="110" height="30"/>
                                 <state key="normal" title="Select an Image"/>
+                                <connections>
+                                    <action selector="ImagePick:" destination="0p2-sn-GFu" eventType="touchUpInside" id="CwB-mI-vYb"/>
+                                </connections>
                             </button>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="jNc-19-xrw">
                                 <rect key="frame" x="47" y="330" width="320" height="50"/>
@@ -135,6 +138,13 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XD2-m1-qYQ">
+                                <rect key="frame" x="130" y="561" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="X6S-2C-fgQ"/>
+                                    <constraint firstAttribute="height" constant="150" id="vKz-jF-Y5c"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CnE-FC-M4s"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -144,6 +154,7 @@
                             <constraint firstItem="MmC-an-mid" firstAttribute="top" secondItem="0Wu-Ek-vah" secondAttribute="bottom" constant="70" id="57p-Wn-2HT"/>
                             <constraint firstItem="jNc-19-xrw" firstAttribute="top" secondItem="CnE-FC-M4s" secondAttribute="top" constant="330" id="6HC-5Q-YoE"/>
                             <constraint firstItem="zJX-AF-2AU" firstAttribute="top" secondItem="CnE-FC-M4s" secondAttribute="top" id="8Vn-nF-7yv"/>
+                            <constraint firstItem="XD2-m1-qYQ" firstAttribute="top" secondItem="AQE-TV-dio" secondAttribute="topMargin" constant="561" id="8fU-F7-Cyf"/>
                             <constraint firstItem="0Wu-Ek-vah" firstAttribute="centerX" secondItem="AQE-TV-dio" secondAttribute="centerX" id="9A2-AC-fcx"/>
                             <constraint firstItem="MmC-an-mid" firstAttribute="centerX" secondItem="AQE-TV-dio" secondAttribute="centerX" id="9zi-EP-MFX"/>
                             <constraint firstItem="dwx-jm-1yG" firstAttribute="centerX" secondItem="AQE-TV-dio" secondAttribute="centerX" id="BJv-jo-vtu"/>
@@ -151,9 +162,11 @@
                             <constraint firstItem="fqC-iH-GrG" firstAttribute="top" secondItem="AQE-TV-dio" secondAttribute="top" constant="20" id="NPi-nX-lWd"/>
                             <constraint firstItem="lf5-fZ-Rde" firstAttribute="top" secondItem="AQE-TV-dio" secondAttribute="topMargin" constant="460" id="Q4u-0v-yEe"/>
                             <constraint firstItem="lf5-fZ-Rde" firstAttribute="centerX" secondItem="AQE-TV-dio" secondAttribute="centerX" id="TXt-6p-TOQ"/>
+                            <constraint firstItem="XD2-m1-qYQ" firstAttribute="centerX" secondItem="AQE-TV-dio" secondAttribute="centerX" constant="-2" id="fs8-XL-gsg"/>
                             <constraint firstItem="dwx-jm-1yG" firstAttribute="top" secondItem="AQE-TV-dio" secondAttribute="topMargin" constant="510" id="h67-9r-icG"/>
                             <constraint firstItem="0Wu-Ek-vah" firstAttribute="top" secondItem="fqC-iH-GrG" secondAttribute="bottom" constant="120" id="j5b-xm-TAw"/>
                             <constraint firstItem="fqC-iH-GrG" firstAttribute="centerX" secondItem="AQE-TV-dio" secondAttribute="centerX" id="juX-ym-HRi"/>
+                            <constraint firstItem="XD2-m1-qYQ" firstAttribute="leading" secondItem="CnE-FC-M4s" secondAttribute="leading" constant="130" id="kFT-Jx-xqc"/>
                             <constraint firstItem="zJX-AF-2AU" firstAttribute="leading" secondItem="CnE-FC-M4s" secondAttribute="leading" id="lNh-Xj-SNv"/>
                             <constraint firstItem="CnE-FC-M4s" firstAttribute="trailing" secondItem="zJX-AF-2AU" secondAttribute="trailing" id="mVa-HS-7be"/>
                             <constraint firstItem="jNc-19-xrw" firstAttribute="centerX" secondItem="AQE-TV-dio" secondAttribute="centerX" id="p81-cR-BDK"/>
@@ -163,6 +176,7 @@
                     <navigationItem key="navigationItem" id="uN5-Ei-DVt"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="PickedImage" destination="XD2-m1-qYQ" id="vLQ-dS-0ey"/>
                         <outlet property="TaskDue" destination="jNc-19-xrw" id="HVy-UP-IlD"/>
                         <outlet property="TaskNameField" destination="0Wu-Ek-vah" id="h0V-0L-0eB"/>
                         <segue destination="VjY-UN-Vf1" kind="unwind" identifier="unwindToViewController" unwindAction="unwindToViewController:" id="19j-HX-fHY"/>
