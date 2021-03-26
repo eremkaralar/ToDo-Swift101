@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -126,9 +127,28 @@
                                     <constraint firstAttribute="width" constant="100" id="hTI-Le-MUg"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Default Images" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="lf5-fZ-Rde">
-                                <rect key="frame" x="132" y="279" width="150" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Yau-fg-jNz">
+                                <rect key="frame" x="0.0" y="355" width="414" height="404"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HuQ-8S-FgQ">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="0nn-oy-7qL">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bj8-LV-V6W">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Default Images" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="lf5-fZ-Rde">
+                                <rect key="frame" x="150" y="295" width="114" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -137,10 +157,14 @@
                         <viewLayoutGuide key="safeArea" id="CnE-FC-M4s"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="lf5-fZ-Rde" firstAttribute="centerX" secondItem="AQE-TV-dio" secondAttribute="centerX" id="2jw-aQ-lKR"/>
                             <constraint firstItem="MmC-an-mid" firstAttribute="top" secondItem="AQE-TV-dio" secondAttribute="topMargin" constant="173" id="5gT-9L-RCV"/>
                             <constraint firstItem="jNc-19-xrw" firstAttribute="top" secondItem="AQE-TV-dio" secondAttribute="topMargin" constant="158" id="7iO-fm-CRh"/>
                             <constraint firstItem="zJX-AF-2AU" firstAttribute="top" secondItem="CnE-FC-M4s" secondAttribute="top" id="8Vn-nF-7yv"/>
                             <constraint firstItem="0Wu-Ek-vah" firstAttribute="leading" secondItem="9wA-DY-9MH" secondAttribute="trailing" constant="16.5" id="C6v-Tk-8hd"/>
+                            <constraint firstItem="lf5-fZ-Rde" firstAttribute="leading" secondItem="CnE-FC-M4s" secondAttribute="leading" constant="150" id="C9e-iP-bOV"/>
+                            <constraint firstItem="CnE-FC-M4s" firstAttribute="bottom" secondItem="Yau-fg-jNz" secondAttribute="bottom" id="CMV-4L-qoN"/>
+                            <constraint firstItem="CnE-FC-M4s" firstAttribute="trailing" secondItem="Yau-fg-jNz" secondAttribute="trailing" id="CnS-8v-erc"/>
                             <constraint firstItem="XD2-m1-qYQ" firstAttribute="leading" secondItem="CnE-FC-M4s" secondAttribute="leading" constant="23" id="Cs5-BG-jVh"/>
                             <constraint firstItem="fqC-iH-GrG" firstAttribute="centerX" secondItem="AQE-TV-dio" secondAttribute="centerX" id="MCL-Q1-z2l"/>
                             <constraint firstItem="fqC-iH-GrG" firstAttribute="top" secondItem="AQE-TV-dio" secondAttribute="top" constant="20" id="NPi-nX-lWd"/>
@@ -149,18 +173,23 @@
                             <constraint firstAttribute="trailingMargin" secondItem="jNc-19-xrw" secondAttribute="trailing" constant="12" id="YTQ-WB-25D"/>
                             <constraint firstItem="9wA-DY-9MH" firstAttribute="top" secondItem="AQE-TV-dio" secondAttribute="topMargin" constant="123" id="Yir-Tg-rwA"/>
                             <constraint firstItem="XD2-m1-qYQ" firstAttribute="top" secondItem="AQE-TV-dio" secondAttribute="topMargin" constant="108" id="bx9-Pn-ySO"/>
+                            <constraint firstItem="Yau-fg-jNz" firstAttribute="top" secondItem="CnE-FC-M4s" secondAttribute="top" constant="355" id="enG-OG-zZX"/>
                             <constraint firstItem="0Wu-Ek-vah" firstAttribute="top" secondItem="AQE-TV-dio" secondAttribute="topMargin" constant="108" id="iUS-b1-cWm"/>
+                            <constraint firstItem="Yau-fg-jNz" firstAttribute="centerX" secondItem="AQE-TV-dio" secondAttribute="centerX" id="jaV-mi-l6m"/>
                             <constraint firstItem="fqC-iH-GrG" firstAttribute="centerX" secondItem="AQE-TV-dio" secondAttribute="centerX" id="juX-ym-HRi"/>
                             <constraint firstItem="zJX-AF-2AU" firstAttribute="leading" secondItem="CnE-FC-M4s" secondAttribute="leading" id="lNh-Xj-SNv"/>
                             <constraint firstItem="CnE-FC-M4s" firstAttribute="trailing" secondItem="zJX-AF-2AU" secondAttribute="trailing" id="mVa-HS-7be"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0Wu-Ek-vah" secondAttribute="trailing" constant="12" id="p4x-ef-sqF"/>
+                            <constraint firstItem="Yau-fg-jNz" firstAttribute="leading" secondItem="CnE-FC-M4s" secondAttribute="leading" id="psc-QV-vfO"/>
                             <constraint firstItem="jNc-19-xrw" firstAttribute="leading" secondItem="MmC-an-mid" secondAttribute="trailing" constant="29" id="qKy-ip-lyJ"/>
+                            <constraint firstItem="lf5-fZ-Rde" firstAttribute="top" secondItem="AQE-TV-dio" secondAttribute="topMargin" constant="295" id="xe2-ht-kyD"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="uN5-Ei-DVt"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="CollectionView" destination="Yau-fg-jNz" id="ySh-SY-ftf"/>
                         <outlet property="PickedImage" destination="XD2-m1-qYQ" id="vLQ-dS-0ey"/>
                         <outlet property="TaskDue" destination="jNc-19-xrw" id="HVy-UP-IlD"/>
                         <outlet property="TaskNameField" destination="0Wu-Ek-vah" id="h0V-0L-0eB"/>
