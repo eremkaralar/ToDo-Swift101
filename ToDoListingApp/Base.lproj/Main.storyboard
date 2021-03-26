@@ -66,56 +66,37 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Wu-Ek-vah">
-                                <rect key="frame" x="82" y="161" width="250" height="50"/>
+                                <rect key="frame" x="198" y="108" width="184" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="GEw-U4-M7J"/>
-                                    <constraint firstAttribute="width" constant="250" id="sAk-jy-Ww9"/>
+                                    <constraint firstAttribute="height" constant="50" id="aC9-3z-bBp"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To Do Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="9wA-DY-9MH">
-                                <rect key="frame" x="132" y="106" width="150" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="91n-xh-KWQ"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="W9b-q2-0Nd"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="9wA-DY-9MH">
+                                <rect key="frame" x="132" y="123" width="49.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To Do Due" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="MmC-an-mid">
-                                <rect key="frame" x="132" y="281" width="150" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="N8w-kU-Stk"/>
-                                    <constraint firstAttribute="height" constant="20" id="OAg-ge-c8Y"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="MmC-an-mid">
+                                <rect key="frame" x="132" y="173" width="35.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To Do Image" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="lf5-fZ-Rde">
-                                <rect key="frame" x="132" y="460" width="150" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="eMi-bf-gE9"/>
-                                    <constraint firstAttribute="height" constant="20" id="nti-fB-mhR"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwx-jm-1yG">
-                                <rect key="frame" x="152" y="510" width="110" height="30"/>
-                                <state key="normal" title="Select an Image"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwx-jm-1yG">
+                                <rect key="frame" x="20" y="216" width="104" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Pick an Image"/>
                                 <connections>
                                     <action selector="ImagePick:" destination="0p2-sn-GFu" eventType="touchUpInside" id="CwB-mI-vYb"/>
                                 </connections>
                             </button>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="jNc-19-xrw">
-                                <rect key="frame" x="47" y="330" width="320" height="50"/>
+                            <datePicker contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="jNc-19-xrw">
+                                <rect key="frame" x="196.5" y="158" width="185.5" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Akm-Ch-8Pc"/>
-                                    <constraint firstAttribute="width" constant="320" id="fqP-qp-LFx"/>
+                                    <constraint firstAttribute="height" constant="50" id="TJF-oB-5bd"/>
                                 </constraints>
                             </datePicker>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zJX-AF-2AU">
@@ -124,7 +105,7 @@
                                     <constraint firstAttribute="height" constant="56" id="3JH-AK-Cnu"/>
                                 </constraints>
                                 <items>
-                                    <navigationItem title="Title" id="04z-ia-2Uq">
+                                    <navigationItem title="Create a To Do" id="04z-ia-2Uq">
                                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="xFC-Td-lfS">
                                             <connections>
                                                 <action selector="CancelAction:" destination="0p2-sn-GFu" id="Rng-ss-HWQ"/>
@@ -139,37 +120,41 @@
                                 </items>
                             </navigationBar>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XD2-m1-qYQ">
-                                <rect key="frame" x="130" y="561" width="150" height="150"/>
+                                <rect key="frame" x="23" y="108" width="100" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="X6S-2C-fgQ"/>
-                                    <constraint firstAttribute="height" constant="150" id="vKz-jF-Y5c"/>
+                                    <constraint firstAttribute="height" constant="100" id="X9L-Kt-LIJ"/>
+                                    <constraint firstAttribute="width" constant="100" id="hTI-Le-MUg"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Default Images" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="lf5-fZ-Rde">
+                                <rect key="frame" x="132" y="279" width="150" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CnE-FC-M4s"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="9wA-DY-9MH" firstAttribute="centerX" secondItem="AQE-TV-dio" secondAttribute="centerX" id="0EM-hV-bzN"/>
-                            <constraint firstItem="9wA-DY-9MH" firstAttribute="top" secondItem="fqC-iH-GrG" secondAttribute="bottom" constant="65" id="4Y0-ms-I9Z"/>
-                            <constraint firstItem="MmC-an-mid" firstAttribute="top" secondItem="0Wu-Ek-vah" secondAttribute="bottom" constant="70" id="57p-Wn-2HT"/>
-                            <constraint firstItem="jNc-19-xrw" firstAttribute="top" secondItem="CnE-FC-M4s" secondAttribute="top" constant="330" id="6HC-5Q-YoE"/>
+                            <constraint firstItem="MmC-an-mid" firstAttribute="top" secondItem="AQE-TV-dio" secondAttribute="topMargin" constant="173" id="5gT-9L-RCV"/>
+                            <constraint firstItem="jNc-19-xrw" firstAttribute="top" secondItem="AQE-TV-dio" secondAttribute="topMargin" constant="158" id="7iO-fm-CRh"/>
                             <constraint firstItem="zJX-AF-2AU" firstAttribute="top" secondItem="CnE-FC-M4s" secondAttribute="top" id="8Vn-nF-7yv"/>
-                            <constraint firstItem="XD2-m1-qYQ" firstAttribute="top" secondItem="AQE-TV-dio" secondAttribute="topMargin" constant="561" id="8fU-F7-Cyf"/>
-                            <constraint firstItem="0Wu-Ek-vah" firstAttribute="centerX" secondItem="AQE-TV-dio" secondAttribute="centerX" id="9A2-AC-fcx"/>
-                            <constraint firstItem="MmC-an-mid" firstAttribute="centerX" secondItem="AQE-TV-dio" secondAttribute="centerX" id="9zi-EP-MFX"/>
-                            <constraint firstItem="dwx-jm-1yG" firstAttribute="centerX" secondItem="AQE-TV-dio" secondAttribute="centerX" id="BJv-jo-vtu"/>
+                            <constraint firstItem="0Wu-Ek-vah" firstAttribute="leading" secondItem="9wA-DY-9MH" secondAttribute="trailing" constant="16.5" id="C6v-Tk-8hd"/>
+                            <constraint firstItem="XD2-m1-qYQ" firstAttribute="leading" secondItem="CnE-FC-M4s" secondAttribute="leading" constant="23" id="Cs5-BG-jVh"/>
                             <constraint firstItem="fqC-iH-GrG" firstAttribute="centerX" secondItem="AQE-TV-dio" secondAttribute="centerX" id="MCL-Q1-z2l"/>
                             <constraint firstItem="fqC-iH-GrG" firstAttribute="top" secondItem="AQE-TV-dio" secondAttribute="top" constant="20" id="NPi-nX-lWd"/>
-                            <constraint firstItem="lf5-fZ-Rde" firstAttribute="top" secondItem="AQE-TV-dio" secondAttribute="topMargin" constant="460" id="Q4u-0v-yEe"/>
-                            <constraint firstItem="lf5-fZ-Rde" firstAttribute="centerX" secondItem="AQE-TV-dio" secondAttribute="centerX" id="TXt-6p-TOQ"/>
-                            <constraint firstItem="XD2-m1-qYQ" firstAttribute="centerX" secondItem="AQE-TV-dio" secondAttribute="centerX" constant="-2" id="fs8-XL-gsg"/>
-                            <constraint firstItem="dwx-jm-1yG" firstAttribute="top" secondItem="AQE-TV-dio" secondAttribute="topMargin" constant="510" id="h67-9r-icG"/>
-                            <constraint firstItem="0Wu-Ek-vah" firstAttribute="top" secondItem="fqC-iH-GrG" secondAttribute="bottom" constant="120" id="j5b-xm-TAw"/>
+                            <constraint firstItem="MmC-an-mid" firstAttribute="leading" secondItem="XD2-m1-qYQ" secondAttribute="trailing" constant="9" id="Rka-ut-6xZ"/>
+                            <constraint firstItem="9wA-DY-9MH" firstAttribute="leading" secondItem="XD2-m1-qYQ" secondAttribute="trailing" constant="9" id="Wdc-bY-Xyv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jNc-19-xrw" secondAttribute="trailing" constant="12" id="YTQ-WB-25D"/>
+                            <constraint firstItem="9wA-DY-9MH" firstAttribute="top" secondItem="AQE-TV-dio" secondAttribute="topMargin" constant="123" id="Yir-Tg-rwA"/>
+                            <constraint firstItem="XD2-m1-qYQ" firstAttribute="top" secondItem="AQE-TV-dio" secondAttribute="topMargin" constant="108" id="bx9-Pn-ySO"/>
+                            <constraint firstItem="0Wu-Ek-vah" firstAttribute="top" secondItem="AQE-TV-dio" secondAttribute="topMargin" constant="108" id="iUS-b1-cWm"/>
                             <constraint firstItem="fqC-iH-GrG" firstAttribute="centerX" secondItem="AQE-TV-dio" secondAttribute="centerX" id="juX-ym-HRi"/>
-                            <constraint firstItem="XD2-m1-qYQ" firstAttribute="leading" secondItem="CnE-FC-M4s" secondAttribute="leading" constant="130" id="kFT-Jx-xqc"/>
                             <constraint firstItem="zJX-AF-2AU" firstAttribute="leading" secondItem="CnE-FC-M4s" secondAttribute="leading" id="lNh-Xj-SNv"/>
                             <constraint firstItem="CnE-FC-M4s" firstAttribute="trailing" secondItem="zJX-AF-2AU" secondAttribute="trailing" id="mVa-HS-7be"/>
-                            <constraint firstItem="jNc-19-xrw" firstAttribute="centerX" secondItem="AQE-TV-dio" secondAttribute="centerX" id="p81-cR-BDK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0Wu-Ek-vah" secondAttribute="trailing" constant="12" id="p4x-ef-sqF"/>
+                            <constraint firstItem="jNc-19-xrw" firstAttribute="leading" secondItem="MmC-an-mid" secondAttribute="trailing" constant="29" id="qKy-ip-lyJ"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
