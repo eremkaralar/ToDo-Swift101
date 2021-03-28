@@ -19,7 +19,7 @@ struct Alert {
     
     
     static func showIncompleteFormAlert(on vc: UIViewController) {
-        showBasicAlert(on: vc, with: "Incompleted", message: "To create a todo, please pick an image and type your task name")
+        showBasicAlert(on: vc, with: "Incompleted", message: "To create a todo, please pick an image from Camera Roll or Default Images and type your task name")
     }
     
     static func showIncompleteTextAlert(on vc: UIViewController) {
@@ -27,11 +27,11 @@ struct Alert {
     }
     
     static func showIncompleteImageAlert(on vc: UIViewController) {
-        showBasicAlert(on: vc, with: "Incompleted", message: "To create a todo, please pick an image")
+        showBasicAlert(on: vc, with: "Incompleted", message: "To create a todo, please pick an image from Camera Roll or Default Images")
     }
     
     static func showAbsurdDate(on vc: UIViewController) {
-        showBasicAlert(on: vc, with: "Incompleted", message: "To create a todo, please select a future date")
+        showBasicAlert(on: vc, with: "Absurd Date", message: "To create a todo, please select a future date")
     }
     
     

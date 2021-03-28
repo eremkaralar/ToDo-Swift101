@@ -86,14 +86,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwx-jm-1yG">
-                                <rect key="frame" x="20" y="216" width="104" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Pick an Image"/>
-                                <connections>
-                                    <action selector="ImagePick:" destination="0p2-sn-GFu" eventType="touchUpInside" id="CwB-mI-vYb"/>
-                                </connections>
-                            </button>
                             <datePicker contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="jNc-19-xrw">
                                 <rect key="frame" x="196.5" y="158" width="185.5" height="50"/>
                                 <constraints>
@@ -147,12 +139,23 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Default Images" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="lf5-fZ-Rde">
-                                <rect key="frame" x="150" y="295" width="114" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick an image from Default Images" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="lf5-fZ-Rde">
+                                <rect key="frame" x="132" y="266" width="150" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="XQN-Ww-07v"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="dwx-jm-1yG">
+                                <rect key="frame" x="23" y="216" width="121" height="56"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="13"/>
+                                <state key="normal" title="Pick an Image from Camera Roll"/>
+                                <connections>
+                                    <action selector="ImagePick:" destination="0p2-sn-GFu" eventType="touchUpInside" id="CwB-mI-vYb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CnE-FC-M4s"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -161,11 +164,13 @@
                             <constraint firstItem="MmC-an-mid" firstAttribute="top" secondItem="AQE-TV-dio" secondAttribute="topMargin" constant="173" id="5gT-9L-RCV"/>
                             <constraint firstItem="jNc-19-xrw" firstAttribute="top" secondItem="AQE-TV-dio" secondAttribute="topMargin" constant="158" id="7iO-fm-CRh"/>
                             <constraint firstItem="zJX-AF-2AU" firstAttribute="top" secondItem="CnE-FC-M4s" secondAttribute="top" id="8Vn-nF-7yv"/>
+                            <constraint firstItem="Yau-fg-jNz" firstAttribute="top" secondItem="dwx-jm-1yG" secondAttribute="bottom" constant="83" id="B4l-7m-D97"/>
                             <constraint firstItem="0Wu-Ek-vah" firstAttribute="leading" secondItem="9wA-DY-9MH" secondAttribute="trailing" constant="16.5" id="C6v-Tk-8hd"/>
-                            <constraint firstItem="lf5-fZ-Rde" firstAttribute="leading" secondItem="CnE-FC-M4s" secondAttribute="leading" constant="150" id="C9e-iP-bOV"/>
+                            <constraint firstItem="lf5-fZ-Rde" firstAttribute="leading" secondItem="CnE-FC-M4s" secondAttribute="leading" constant="132" id="C9e-iP-bOV"/>
                             <constraint firstItem="CnE-FC-M4s" firstAttribute="bottom" secondItem="Yau-fg-jNz" secondAttribute="bottom" id="CMV-4L-qoN"/>
                             <constraint firstItem="CnE-FC-M4s" firstAttribute="trailing" secondItem="Yau-fg-jNz" secondAttribute="trailing" id="CnS-8v-erc"/>
                             <constraint firstItem="XD2-m1-qYQ" firstAttribute="leading" secondItem="CnE-FC-M4s" secondAttribute="leading" constant="23" id="Cs5-BG-jVh"/>
+                            <constraint firstItem="CnE-FC-M4s" firstAttribute="trailing" secondItem="dwx-jm-1yG" secondAttribute="trailing" constant="270" id="HFZ-tG-GyX"/>
                             <constraint firstItem="fqC-iH-GrG" firstAttribute="centerX" secondItem="AQE-TV-dio" secondAttribute="centerX" id="MCL-Q1-z2l"/>
                             <constraint firstItem="fqC-iH-GrG" firstAttribute="top" secondItem="AQE-TV-dio" secondAttribute="top" constant="20" id="NPi-nX-lWd"/>
                             <constraint firstItem="MmC-an-mid" firstAttribute="leading" secondItem="XD2-m1-qYQ" secondAttribute="trailing" constant="9" id="Rka-ut-6xZ"/>
@@ -173,7 +178,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="jNc-19-xrw" secondAttribute="trailing" constant="12" id="YTQ-WB-25D"/>
                             <constraint firstItem="9wA-DY-9MH" firstAttribute="top" secondItem="AQE-TV-dio" secondAttribute="topMargin" constant="123" id="Yir-Tg-rwA"/>
                             <constraint firstItem="XD2-m1-qYQ" firstAttribute="top" secondItem="AQE-TV-dio" secondAttribute="topMargin" constant="108" id="bx9-Pn-ySO"/>
+                            <constraint firstItem="dwx-jm-1yG" firstAttribute="leading" secondItem="XD2-m1-qYQ" secondAttribute="leading" id="cTp-fW-XQm"/>
                             <constraint firstItem="Yau-fg-jNz" firstAttribute="top" secondItem="CnE-FC-M4s" secondAttribute="top" constant="355" id="enG-OG-zZX"/>
+                            <constraint firstItem="dwx-jm-1yG" firstAttribute="top" secondItem="XD2-m1-qYQ" secondAttribute="bottom" constant="8" symbolic="YES" id="f9e-Cj-NxY"/>
                             <constraint firstItem="0Wu-Ek-vah" firstAttribute="top" secondItem="AQE-TV-dio" secondAttribute="topMargin" constant="108" id="iUS-b1-cWm"/>
                             <constraint firstItem="Yau-fg-jNz" firstAttribute="centerX" secondItem="AQE-TV-dio" secondAttribute="centerX" id="jaV-mi-l6m"/>
                             <constraint firstItem="fqC-iH-GrG" firstAttribute="centerX" secondItem="AQE-TV-dio" secondAttribute="centerX" id="juX-ym-HRi"/>
@@ -182,7 +189,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="0Wu-Ek-vah" secondAttribute="trailing" constant="12" id="p4x-ef-sqF"/>
                             <constraint firstItem="Yau-fg-jNz" firstAttribute="leading" secondItem="CnE-FC-M4s" secondAttribute="leading" id="psc-QV-vfO"/>
                             <constraint firstItem="jNc-19-xrw" firstAttribute="leading" secondItem="MmC-an-mid" secondAttribute="trailing" constant="29" id="qKy-ip-lyJ"/>
-                            <constraint firstItem="lf5-fZ-Rde" firstAttribute="top" secondItem="AQE-TV-dio" secondAttribute="topMargin" constant="295" id="xe2-ht-kyD"/>
+                            <constraint firstItem="lf5-fZ-Rde" firstAttribute="top" secondItem="AQE-TV-dio" secondAttribute="topMargin" constant="266" id="xe2-ht-kyD"/>
                         </constraints>
                     </view>
                     <toolbarItems/>

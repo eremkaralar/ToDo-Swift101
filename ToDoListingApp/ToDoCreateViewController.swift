@@ -118,7 +118,9 @@ extension ToDoCreateViewController: UIImagePickerControllerDelegate, UINavigatio
 extension ToDoCreateViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        print("Cell No: \(indexPath.row).")
+      
+        selectedImage = stackImages[indexPath.row]
+        PickedImage.image = stackImages[indexPath.row]
         
     }
 }
@@ -129,6 +131,7 @@ extension ToDoCreateViewController: UICollectionViewDataSource {
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StackImagesCollectionViewCell", for: indexPath) as! StackImagesCollectionViewCell
+        
         
         cell.stackImageView.image = stackImages[indexPath.row]
         
